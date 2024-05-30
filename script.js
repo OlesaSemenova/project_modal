@@ -23,3 +23,9 @@ for (let i = 0; i < bthShowModelWindow.length; i++) {
 
 bthCloseModelWindow.addEventListener('click', clouseModalWindow);
 overlay.addEventListener('click', clouseModalWindow);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
+    clouseModalWindow();
+  }
+});
